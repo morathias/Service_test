@@ -9,14 +9,24 @@ public class Ship : MonoBehaviour {
     public GameObject restartBtn;
     Vector3 _direction;
 
-	void Start () {
+    void Start()
+    {
         _bullets = transform.GetChild(0).GetComponent<ParticleSystem>();
-	}
-	
-	void Update () {
-        _direction = new Vector3(-Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical"));
-        _direction *= speed;
+    }
 
+    void Update()
+    {
+#if UNITY_EDITOR
+        //_direction = new Vector3(-Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical"));
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            _direction = -Input.GetTouch(0).deltaPosition;
+
+#elif UNITY_ANDROID
+		if(Input.touchCount>0){
+			_direction = new Vector3(-Input.GetTouch(0).deltaPosition.x, -Input.GetTouch(0).deltaPosition.y, transform.position.z);
+		}
+#endif
+        _direction *= speed;
         transform.Translate(_direction * Time.deltaTime);
 
         if (Input.GetButtonDown("Fire1"))
@@ -29,15 +39,27 @@ public class Ship : MonoBehaviour {
 
         if (transform.position.y <= -30)
             transform.position = new Vector3(transform.position.x, -30, transform.position.z);
-	}
 
-    void shoot() {
+        if (transform.position.z > 54.31f)
+            transform.position = new Vector3(transform.position.x, transform.position.y, 54.31f);
+
+        if (transform.position.z < 54f)
+            transform.position = new Vector3(transform.position.x, transform.position.y, 54f);
+    }
+
+    void shoot()
+    {
         _bullets.Emit(1);
     }
 
-    void OnCollisionEnter(Collision meteor) {
+    void OnCollisionEnter(Collision meteor)
+    {
         Debug.Log("perdiste");
         restartBtn.SetActive(true);
+
+        AnalyticsManager.retrievePoints(PointsManager.points);
+        PointsManager.points = 0;
+
         gameObject.SetActive(false);
     }
 }
