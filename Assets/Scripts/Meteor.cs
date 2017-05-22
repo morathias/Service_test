@@ -23,6 +23,7 @@ public class Meteor : MonoBehaviour {
         Debug.Log("choco bala");
         if (_health <= 0) {
             PointsManager.updatePoints(transform.localScale.x);
+            PlayServicesManager.incrementAchivement(GPGSIds.achievement_destroyer, 1);
             Destroy(gameObject);
         }
     }

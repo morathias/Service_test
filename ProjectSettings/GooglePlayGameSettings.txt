@@ -1,0 +1,9 @@
+lastUpgrade=00938
+proj.pluginVersion=0.9.38
+proj.AppId=825073172839
+proj.classDir=Assets
+proj.ConstantsClassName=GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3cstring+name%3d%22app_id%22%3e825073172839%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22package_name%22%3ecom.Test.ServiceTest%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_you_died%22%3eCgkI54LG0YEYEAIQAA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_destroyer%22%3eCgkI54LG0YEYEAIQAQ%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22leaderboard_leaderboard%22%3eCgkI54LG0YEYEAIQAg%3c%2fstring%3e%0d%0a%3c%2fresources%3e
+and.ClientId=
+android.SetupDone=true
+and.BundleId=com.Test.ServiceTest

@@ -58,6 +58,8 @@ public class Ship : MonoBehaviour {
         restartBtn.SetActive(true);
 
         AnalyticsManager.retrievePoints(PointsManager.points);
+        PlayServicesManager.addScoreToLeaderBoard(GPGSIds.leaderboard_leaderboard, PointsManager.points);
+        PlayServicesManager.unlockAchivement(GPGSIds.achievement_you_died);
         PointsManager.points = 0;
 
         gameObject.SetActive(false);

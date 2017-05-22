@@ -5,6 +5,7 @@ using UnityEngine.Analytics;
 
 public class AnalyticsManager : MonoBehaviour {
     public static void retrievePoints(int points) {
-        Analytics.CustomEvent("gameOver", new Dictionary<string, object> { {"points: ", points} });
+        AnalyticsResult result = Analytics.CustomEvent("gameOver", new Dictionary<string, object> { {"points: ", points} });
+        Debug.Log("Retrieve status: " + result);
     }
 }

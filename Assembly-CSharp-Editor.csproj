@@ -46,6 +46,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSAndroidSetupUI.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSDependencies.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSDocsUI.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSIOSSetupUI.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSPostBuild.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSProjectSettings.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSStrings.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSUpgrader.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\GPGSUtil.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\NearbyConnectionUI.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\PlistBuddyHelper.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Elements.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Lexer.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Objects.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\PBXProject.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Parser.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Sections.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Serializer.cs" />
+     <Compile Include="Assets\GooglePlayGames\Editor\xcode\Utils.cs" />
      <Compile Include="Assets\ThirdParty\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
      <Compile Include="Assets\ThirdParty\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
      <Compile Include="Assets\ThirdParty\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -90,12 +109,15 @@
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\ACES.cginc" />
+     <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
      <None Include="Assets\ThirdParty\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\Uber.shader" />
+     <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\Blit.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+     <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
      <None Include="Assets\ThirdParty\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\FXAA3.cginc" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\MotionBlur.shader" />
@@ -107,13 +129,17 @@
      <None Include="Assets\ThirdParty\PostProcessing\Editor Resources\UI\Trackball.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\Bloom.cginc" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\TAA.shader" />
+     <None Include="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\TAA.cginc" />
+     <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\FXAA.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+     <None Include="Assets\GooglePlayGames\Editor\template-Constants.txt" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\ThirdParty\PostProcessing\Resources\Shaders\Bloom.shader" />
      <None Include="Assets\ThirdParty\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
@@ -186,6 +212,15 @@
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.IOSResolver">
+ <HintPath>C:/Users/Morales/Desktop/Documents/trabajos de unity/Service_test/Assets/PlayServicesResolver/Editor/Google.IOSResolver.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.JarResolver">
+ <HintPath>C:/Users/Morales/Desktop/Documents/trabajos de unity/Service_test/Assets/PlayServicesResolver/Editor/Google.JarResolver.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.VersionHandler">
+ <HintPath>C:/Users/Morales/Desktop/Documents/trabajos de unity/Service_test/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
